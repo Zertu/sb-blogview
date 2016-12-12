@@ -13,5 +13,10 @@
     "express": "~4.14.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "ejs-loader": "^0.3.0",
+    "underscore": "^1.8.3",
+    "webpack": "^1.14.0"
   }
 }
