@@ -1,4 +1,5 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     //插件项
@@ -18,12 +19,15 @@ module.exports = {
             loader: 'style-loader!css-loader'
         }, {
             test: /\.scss$/,
-            loader: 'style!css!sass?sourceMap'
+            loader: ExtractTextPlugin.extract("style", 'css!sass')
         }, {
             test: /\.(png|jpg)$/,
             loader: 'url-loader?limit=8192'
         }]
     },
+    plugins: [
+        new ExtractTextPlugin("public/stylesheets/style.css") //提取出来的样式放在style.css文件中
+    ],
     //其它解决方案配置
     resolve: {
         extensions: ['', '.js', '.json', '.scss'],
