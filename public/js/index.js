@@ -1,4 +1,4 @@
-require('../stylesheets/index.sass')
+
 onload=()=>{
     const trianglify = require('trianglify')
 let pattern = trianglify({
