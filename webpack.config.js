@@ -5,7 +5,8 @@ module.exports = {
     //插件项
     //页面入口文件配置
     entry: {
-        index: './public/js/index.js'
+        index: './public/js/index.js',
+        article:'./public/js/article.js'
     },
     //入口文件输出配置
     output: {
