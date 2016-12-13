@@ -21,3 +21,6 @@ function querysql(sqlstring,fn) {
         }
     })
 }
+ module.exports={
+     querysql:querysql
+ }
