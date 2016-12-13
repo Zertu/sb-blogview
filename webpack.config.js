@@ -1,12 +1,13 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+require('sass-loader')
 module.exports = {
     //插件项
     //页面入口文件配置
     entry: {
         index: './public/js/index.js',
-        article:'./public/js/article.js'
+        article:'./public/js/article.js',
+        
     },
     //入口文件输出配置
     output: {
@@ -27,11 +28,12 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin("public/stylesheets/style.css") //提取出来的样式放在style.css文件中
+        new ExtractTextPlugin("/public/stylesheets/[name].css") 
     ],
     //其它解决方案配置
     resolve: {
         extensions: ['', '.js', '.json', '.scss'],
         alias: {}
     }
+    
 };

@@ -44,7 +44,6 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
 	onload=()=>{
 	    const trianglify = __webpack_require__(1)
 	let pattern = trianglify({
