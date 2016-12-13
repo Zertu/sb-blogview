@@ -17,7 +17,10 @@ function querysql(sqlstring,fn) {
         if(err){
             console.error(err)
         }else{
-            con.query(sqlstring,fn(err,rows))
+            con.query(sqlstring,(err,rows)=>{
+                console.info(sqlstring)
+                if(fn)fn(err,rows)
+            })
         }
     })
 }

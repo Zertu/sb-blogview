@@ -3,14 +3,14 @@
 <% if (session) { %>  
 
 <div class="userinfo">
-
+    <span><%= session.userName %></span>
+</div>
 <% }else{%>  
 <form action="/login"  method = 'post' >
-<input type="mail" name='username' />
+<input type="email" name='email' />
 <input type="password" name='password' />
 <input type="submit">
 </form>
 
 <% } %>  
-</div>
 </label>
