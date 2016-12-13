@@ -1,9 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-   height:100%;
 }
-html{  height:100%;} 
 #bg{
   position: absolute;
   left: 0;
@@ -90,10 +88,10 @@ a {
     margin-left: 10px;
 }
 .sider{
-  position: absolute;
+  position: fixed;
   left: -250px;
   top: 0;
-  bottom: 0;
+  bottom: -100px;
   transition: 0.5s ease-in-out;
   display: block;
   width: 300px;

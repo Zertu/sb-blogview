@@ -17,6 +17,7 @@
   "devDependencies": {
     "ejs-loader": "^0.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "mysql": "^2.12.0",
     "node-sass": "^4.0.0",
     "sass-loader": "^4.0.2",
     "trianglify": "^1.0.1",
