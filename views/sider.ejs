@@ -1,8 +1,15 @@
 <input type="checkbox" id='clickSimulation'>
 <label for="clickSimulation" class='sider'>
-<% if (session.user) { %>  
+<% if (session) { %>  
 
 <div class="userinfo">
+
+<% }else{%>  
+<form action="/login"  method = 'post' >
+<input type="mail" name='username' />
+<input type="password" name='password' />
+<input type="submit">
+</form>
 
 <% } %>  
 </div>
