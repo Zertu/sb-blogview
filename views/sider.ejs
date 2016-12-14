@@ -4,6 +4,8 @@
 
 <div class="userinfo">
     <span><%= session.userName %></span>
+    <div class="imagehead"><img src="<%= session.imagehead %>" alt=""></div>
+    <a href="/logout">注销</a>
 </div>
 <% }else{%>  
 <form action="/login"  method = 'post' class='loginform'>

@@ -1,142 +1,187 @@
 body {
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
-#bg{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1
+
+#bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1
 }
+
 a {
-  color: #00B7FF;
+    color: #666666;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    transition: 0.3s all;
 }
 
 .infos {
-  width: 400px;
-  height: 180px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+    width: 400px;
+    height: 180px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .infos-child {
-  height: 60px;
-  text-align: center;
-  font-size: 30px;
-  color: #666666;
-  line-height: 1.6
+    text-align: center;
+    font-size: 30px;
+    color: #666666;
+    line-height: 1.6
 }
 
 .division {
-  height: 0;
-  width: 75%;
-  border-top: 1px solid #6699CC;
-  
-  margin:  auto
+    height: 0;
+    width: 75%;
+    border-top: 1px solid #6699CC;
+    margin: auto
 }
 
 .division-first {
-  width: 50%;
+    width: 50%;
 }
-.infos-child-first{
+
+.infos-child-first {
     font-size: 24px;
     line-height: 2.4;
-
 }
-.infos-child-second{
+
+.infos-child-second {
     width: 50%;
     display: flex;
     flex-direction: row;
     font-size: 16px;
-    margin:10px auto
+    margin: 10px auto
 }
-.infos-child-second div{
+
+.infos-child-second div {
     display: flex;
 }
-.infos-child-second a{
+
+.infos-child-second a {
     color: #666666;
-    transition: all 0.3s 
+    transition: all 0.3s
 }
-.infos-child-second a:hover{
+
+.infos-child-second a:hover {
     color: white;
-    transition: all 0.3s 
+    transition: all 0.3s
 }
-.infos-child-second div a{
-    border-radius: 20px ;
-    border: 1px solid ;
+
+.infos-child-second div a {
+    border-radius: 20px;
+    border: 1px solid;
     width: 50px;
     margin-left: 10px;
     display: block;
 }
-.infos-child-second div span:nth-of-type(1) a{
-        margin-left: 0;
+
+.infos-child-second div span:nth-of-type(1) a {
+    margin-left: 0;
 }
 
-.infos-child-second>span a{
+.infos-child-second>span a {
     display: block;
     width: 30px;
-    border:1px solid ;
+    border: 1px solid;
     border-radius: 20px;
     margin-left: 10px;
 }
-.sider{
-  position: fixed;
-  left: 0px;
-  top: 0;
-  bottom: -100px;
-  transition:all 0.5s ease-in-out;
-  display: block;
-  width: 75px;
-  background: #666;
+
+.sider {
+    position: fixed;
+    left: 0px;
+    top: 0;
+    bottom: -100px;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    width: 75px;
+    background: #666;
 }
-input[id=clickSimulation]{
+
+input[id=clickSimulation] {
     display: none;
 }
-.userinfo{
-  right: 0;
-  position: absolute;
-  top: 20%;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
 
+
+/*个人信息*/
+
+.userinfo {
+    right: 0;
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 }
-.userinfo span{
-  margin: auto;
-  display: block;
-  text-align: center;
+
+.imagehead {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid;
+    transition: 0.6s all;
 }
-input[id=clickSimulation]:checked~label{
-  left: 0;
-  width: 300px;
+
+input[id=clickSimulation]:checked~label>.userinfo .imagehead {
+    width: 80px;
+    height: 80px;
+    transition: 0.6s all;
 }
-.loginform{
-  transform: scaleX(0);
-  width: 0;
-  transition: 0.3s ease-in-out;
-  position: absolute;
-  height: 300px;
-  top: 20%;
+
+.userinfo span {
+    margin: auto;
+    display: block;
+    text-align: center;
 }
-.loginform input{
-  height: 55px;
-  border-style: none;
-  border-bottom:1px solid #CC9966;
-  background-color:transparent; 
+
+.userinfo a {
+    color: #333;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
-.loginform:nth-last-child(1){
-  border-bottom:none
+
+input[id=clickSimulation]:checked~label {
+    left: 0;
+    width: 300px;
 }
-input[id=clickSimulation]:checked~label>.loginform{
-  transform: scaleX(1);
-  width: 100%;
-  transition:all 0.7s ;
+
+.loginform {
+    transform: scaleX(0);
+    width: 0;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    height: 300px;
+    top: 20%;
+}
+
+.loginform input {
+    height: 55px;
+    border-style: none;
+    border-bottom: 1px solid #CC9966;
+    background-color: transparent;
+}
+
+.loginform input:nth-last-of-type(1) {
+    border-bottom: none
+}
+
+input[id=clickSimulation]:checked~label>.loginform {
+    transform: scaleX(1);
+    width: 100%;
+    transition: all 0.7s;
 }
